@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> OK Intercâmbio </title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"> </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>
+</head>
+<style> 
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logo img {
+    margin-top: 25px;
+    height: 40px; 
+    margin-left: 30px;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+header {
+    background-color: orange;
+    height: 90px;
+    align-items: left;
+}
+
+.section-1 {
+    background-color: darkviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-1 h1 {
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.section-1 p {
+    color: #fff;
+}
+
+.section-1 .image-container img {
+    max-width: 200%;
+    height: 200%;
+    border-radius: 8px;
+}
+
+.section-1 .rounded-box {
+    background-color: orange;
+    color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+}
+
+.section-2 {
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-2 .rectangle {
+    background-color: darkblue;
+    color: #fff;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    width: calc(50% - 40px);
+}
+
+.section-2 h2 {
+    color: orange;
+}
+
+.section-2 img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.section-2 iframe {
+    border-radius: 5px;
+}
+
+.section-3 {
+    background-color: #f97300;
+    text-align: center;
+}
+
+.section-3 h2 {
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.section-3 .rounded-box p {
+    color: orange;
+}
+
+.section-3 .rounded-box {
+    background-color: #fff;
+    color: #333;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    width: calc(33.333% - 40px);
+}
+
+.section-3 img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.section-4 {
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-4 h4 {
+    color: black;
+}
+
+.section-4 h3 b {
+    color: orange;
+}
+
+.section-4 h3 {
+    color: #fff;
+}
+
+.section-4 .rounded-box a {
+    background-color: orange;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.section-4 .country {
+    background-color: darkblue;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px;
+    width: calc(25% - 40px);
+}
+
+.section-4 .country img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.section-5 {
+    background-color: #ffcc00;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.section-5, .rounded-box .section-5 testimonial {
+    background-color: #fff;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    width: calc(25% - 40px);
+    border: 1px solid #ddd;
+}
+
+.section-5 .testimonial img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.section-5 .testimonial p {
+    color: black;
+}
+.section-5 .text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.section-5 .image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.section-5 .image-container img {
+    max-width: 100%;
+}
+
+.section-6 {
+    background-color: yellow;
+}
+
+.section-6 h2 {
+    color: orange;
+}
+
+.section-6 .rounded-box {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.section-6 input {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.section-6 select {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.section-6 button {
+    backgtound-color: orange;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: orange;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+ .footer p {
+    color: black;
+ }
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container .logo img {
+    height: 40px;
+}
+
+.footer-container .social-icons {
+    margin: 20px 0;
+}
+
+.footer-container .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-container .social-icons img {
+    height: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.confirmation-message {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+  
+@media (max-width: 1024px) {
+
+    .section-1,
+    .section-1 .image-container {
+        flex: 1 1 100%;
+    }
+
+    .section-2 .rectangle {
+        width: calc(100% - 40px);
+    }
+
+    .section-3 .rounded-box {
+        width: calc(50% - 40px);
+    }
+
+    .section-4 .country,
+    .section-5 .testimonial {
+        width: calc(50% - 40px);
+    }
+
+    .section-5 {
+        flex-direction: column;
+    }
+
+    .section-5 .text-content,
+    .section-6 .image-container {
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .section-1,
+    .section-1 .image-container,
+    .section-5 .text-content,
+    .section-6 .image-container {
+        padding: 10px;
+    }
+
+    .section-2 .rectangle,
+    .section-3 .rounded-box,
+    .section-4 .country,
+    .section-5 .testimonial {
+        width: calc(100% - 40px);
+        margin: 10px 0;
+    }
+</style>
+    <body>
+        <header>
+            <div class="logo">
+      <img src="logo-footer.svg" alt="Logo da Ok Intercâmbio">
+    </div> 
+</header>
+        <section class="section section-1"> 
+                <h1> <b> Do zero à Carreira Internacional: o passo a passo gratuito </b> </h1>
+            <br> 
+              <div class="icons">
+                <img src="icons8-vídeo-50.png"> <p> Curso + </p>
+                <img src="icons8-livro-50.png"> <p> E-book + </p>
+                <img src="icons8-planilha-50.png"> <p> Modelo de planejamento </p>
+              </div>
+            </div>
+            <br> 
+            <div class="image-container">
+                <img src="OK_INTERCAMBIO_SUA-CARREIRA-VOA.png" alt="Imagem 1">
+            </div>            
+        </section>
+        <section class="section section-2">
+            <div class="rectangle">
+                <img src="icons8-atlas-64.png" alt="Ícone 1">
+                <p> <b> Saiba como fazer um intercâmbio caber no seu orçamento! </b> </p>
+            </div>
+            <div class="rectangle">
+                <img src="icons8-avião-50.png" alt="Ícone 2">
+                <p> <b> Entenda como escolher o destino com as melhores oportunidades para você! </b> </p>
+            </div>
+            <br> 
+          <h2> Aprenda com quem tem experiência internacional </h2>
+          <br>
+          <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3e7fFfssi8M?si=vRdHBKRGC6o4cXnh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>
+                </div>
+            </div>
+        </section>
+        <section class="section section-3">
+            <h2>Receba um e-book exclusivo com:</h2>
+            <div class="rounded-box">
+                <img src="icons8-planejador-50.png">
+                <p> <b> Modelo de planejamento passo a passo </b> </p>
+            </div>
+            <div class="rounded-box">
+                <img src="icons8-spreadsheet-32.png">
+                <p> <b> Modelo de planilha financeira </b> </p>
+            </div>
+            <div class="rounded-box">
+                <img src="icons8-mala-50.png">
+                <p> <b> X passos para conseguir emprego fora do país </b> </p>
+            </div>
+        </section>
+        <section class="section section-4">
+          <h3> <b> Você pode estudar e trabalhar nos melhores países do mundo em qualidade de vida! </b> </h3> 
+            <div class="country">
+                <img src="australia.jpg" alt="País 1">
+                <h3> Austrália </h3>
+                <div class="rounded-box">
+                <a> Saiba mais </a>
+            </div>
+        </div>
+            <div class="country">
+                <img src="irlanda.jpg" alt="País 2">
+                <h3> Irlanda </h3>
+                <div class="rounded-box">
+                <a> Saiba mais </a>
+            </div>
+        </div>
+            <div class="country">
+                <img src="canada.jpg" alt="País 3">
+                <h3> Canadá </h3>
+                <div class="rounded-box">
+                <a> Saiba mais </a>
+            </div>
+        </div>
+            <div class="country">
+                <img src="novazelandia.jpg" alt="País 4">
+                <h3> Nova Zelândia </h3>
+                <div class="rounded-box">
+                <a> Saiba mais </a>
+            </div>
+        </div>
+          <br> 
+          <section class="section section-5">
+          <h3> <b> Experiência internacional transforma vidas e carreiras </b> </h3> 
+            <div class="testimonial">
+                <img src="depoimento_ana-beatriz.webp" alt="Pessoa 1">
+                <h4> Ana Beatriz - Mansa/SP </h4>
+                <p> Muito bom o atendimento, fui amparada pela equipe a todo momento em especial o Bruno que me ajudou desde o momento que fechei o pacote até todo momento que necessite de alguma ajuda. Já estou na Irlands e só tenho a agradecer. Obrigada! </p>
+            </div>
+        </div>
+            <div class="testimonial">
+                <div class="rounded-box">
+                <img src="depoimento_dan.webp" alt="Pessoa 2">
+                <h4> Dan Luiz - Americana/SP </h4>
+                <p> Super recomendo! Desde que contratei o pacote sempre solícitos e bacanas. A recepcão aqui foi excepcional e que ajudou MUITO! Agradecimento especial à Juliana, Bruno e Mikaelle. E os preços são Mara tb hahahahah. Forte abraço! </p>
+            </div>
+        </div>
+            <div class="testimonial">
+                <div class="rounded-box">
+                <img src="depoimento_naelson.webp" alt="Pessoa 3">
+                <h4> Naelson Vieira - Caucaia/CE </h4>
+                <p> Melhor empresa e melhores profissionais de intercâmbio, atenciosos, sempre a disposição, quando precisei na preparação e durante do meu intercâmbio, fez minha experiência em Salamanca (Espanha) ser a melhor ainda. São nota 10 e recomendo! </p>
+            </div>
+        </div>
+        </section>
+        <section class="section section-6">
+            <div class="text-content">
+                <div class="rounded-box">
+                    <h2> Garanta sua vaga grátis! </h2>
+                <p> Participe de nosso grupo de Whatsapp para receber os links das aulas e do e-book. </p>
+                <form id="registration-form">
+                    <label for="name"> <b> Nome: </b> </label> <br>
+                    <input type="text" id="name" name="name" required>
+                    <br> 
+                    <br>
+                    <label for="email"> <b> E-mail: </b> </label> <br>
+                    <input type="email" id="email" name="email" required>
+                    <p> (Insira para receber todas as novidades do mercado de intercâmbio) </p>
+                    <br> 
+                    <label for="whatsapp"> <b> WhatsApp: </b> </label> <br>  
+                    <input type="tel" id="whatsapp" name="whatsapp" required>
+                    <p> (Os links para as aulas e E-books serão enviados em nossos grupos) </p>
+                    <br>
+                    <label for="country"> <b> País de Interesse: </b> </label> <br> 
+                    <select id="country" name="country" required>
+                        <option value="australia"> Austrália </option>
+                        <option value="ireland"> Irlanda </option>
+                        <option value="canada"> Canadá </option>
+                        <option value="new-zealand">Nova Zelândia</option>
+                    </select>
+                    <p> (Essa informação serve para fazermos um planejamento mais personalizado para você) </p>
+                    <br> 
+                    <div class="rounded-box">
+                    <button type="submit"> Confirmar inscrição </button>
+                </div>
+                </form>
+            </div>
+        </div>
+            <div class="image-container">
+                <img src="OK_INTERCAMBIO_BANNER1.png" alt="Imagem 2">
+            </div>
+        </section>
+    
+    <footer> 
+        <div class="footer-container">
+            <div class="logo">
+                <img src="logo-footer.svg" alt="Logo OK Intercâmbio">
+            </div>
+            <div class="social-icons">
+                <a> <img src="instagram-footer.svg" alt="Instagram"> </a>
+                <a> <img src="whatsapp-footer.svg" alt="WhatsApp"> </a>
+                <a> <img src="icons8-linkedin.svg" alt="LinkedIn"> </a>
+                <a> <img src="youtube-footer.svg" alt="YouTube"> </a>
+            </div>
+            <img src="JIT-logo.svg" alt="Logo da JIT"></p>
+            <p> &copy; 2024 Ok Intercâmbio. Todos os direitos reservados. </p>
+        </div>
+    </footer>
+    <script>
+           document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('registration-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const whatsapp = document.getElementById('whatsapp').value;
+        const country = document.getElementById('country').value;
+
+        if (!name || !email || !whatsapp || !country) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('whatsapp', whatsapp);
+        formData.append('country', country);
+
+        fetch('intercambio.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert("Inscrição realizada com sucesso!");
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('Ocorreu um erro ao processar sua inscrição. Por favor, tente novamente.');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
